@@ -3,6 +3,239 @@
     margin: 0;
     padding: 0;
 }
+$wt: rgb(245, 243, 243);
+$re: #F3232A;
+$b: 1px solid red;
+
+.d-flex{display: flex;}
+
+
 .container-fluid{
     width: 100%;
+    .first-part{
+        .two-pages{
+            width: 100%;
+            height: 200vh;
+            background-color: #9B9B9B;
+            .first-page{
+                width: 100%;
+                height: 100vh;
+                background-image: url(./first_part_image/background.png);
+                .form-card{
+                    position: absolute;
+                    bottom: 0%;
+                    left: 25%;
+                    width: 370px;
+                    height: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 4%;
+                    background-color: black;
+                    border-radius: 10px;
+                    h3{
+                        color: $re;
+                        margin-top: 50px;
+                    }
+                    h2{
+                        color: $wt;
+                        margin-bottom: 10px;
+                    }
+                    input{
+                        background: none;
+                        border: none;
+                        border-bottom: 1px solid gray;
+                        width: 80%;
+                        height: 50px;
+                        padding: 0 15px;
+                        color: $wt;
+                    }
+                    button{
+                        width: 80%;
+                        height: 50px;
+                        margin-top: 20px;
+                        background: $re;
+                        color: $wt;
+                        border: none;
+                        border-radius: 10px;
+                    }
+                }
+        
+                .box{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background-color: #f3232a;
+                    position: absolute;
+                    left: 48%;
+                    top: 40%;
+                    z-index: 1;
+                    box-shadow: 0px 0px 8px 4px rgba(118, 22, 22, 0.31);
+                }
+                .box-1{
+                    @extend .box;
+                    width: 200px;
+                    height: 200px;
+                    left: 50%;
+                    top: 25%;
+                }
+                .box-2{
+                    @extend .box;
+                    width: 150px;
+                    height: 150px;
+                    left: 43%;
+                    top: 25%;
+                }
+                .box-3{
+                    @extend .box;
+                    top: -10%;
+                    left: 45%;
+                    width: 300px;
+                    height: 300px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    color: $wt;
+                    h1{
+                        font-size: 40px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+                .box-4{
+                    @extend .box;
+                    width: 150px;
+                    height: 150px;
+                    left: 25%;
+                    top:-10%;
+                }
+                .box-5{
+                    @extend .box-4;
+                    left: 28%;
+                    top: 10%;
+                    z-index: 0;
+                }
+                .text-first{
+                    width: 25%;
+                    position: absolute;
+                    bottom: 0;
+                    right: 18%;
+                    color: $wt;
+                }
+            }
+        
+            .second-page{
+                width: 100%;
+                height: 100vh;
+                .img{
+                    width: 50%;
+                    height: 98%;
+                    margin-top: 12px;
+                }
+                .second-text{
+                    width: 30%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    color: $wt;
+                    margin-left: 50px;
+                    h1{
+                        font-size: 50px;
+                        margin-bottom: 20px;
+                        margin-top: 50px;
+                    }
+                    h2{
+                        margin-bottom: 10px;
+                    }
+                    h3{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        
+        .third-page{
+            width: 100%;
+            height: 100vh;
+            .third_half_1{
+                width: 50%;
+                height: 100%;
+                background: black;
+                color: $wt;
+                justify-content: end;
+                .third-text{
+                    margin-right: 100px;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 40%;
+                    height: 100%;
+                    h1{
+                        font-size: 50px;
+                    }
+                    h3{
+                        margin-top: 50px;
+                        color: gray;
+                    }
+                }
+                .third-block{
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    background-color: black;
+                    transform: rotate(45deg);
+                    top: 27%;
+                    right: -25px;
+                }
+            }
+            .third_half_2{
+                width: 50%;
+                height: 100%;
+                background-image:linear-gradient(180deg,rgba(0, 0, 0, 0.315),rgba(0, 0, 0, 0.767)),url('./first_part_image/high_rise.jpeg');
+                background-size: cover;
+                .third-text_2{
+                    flex-direction: column;
+                    color: $wt;
+                    width: 35%;
+                    margin-left: 15%;
+                    margin-top: 25%;
+                    .avatar{
+                        width: 60px;
+                        height: 60px;
+                        background: none;
+                        border: 2px solid $wt;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 40px;
+                        margin-bottom: 20px;
+                    }
+                    h4{
+                        margin-top: 10px;
+                    }
+                    h4:nth-child(3){
+                        color: rgb(184, 183, 183);
+                    }
+                }
+        
+            }
+        }
+
+        .fourth-page{
+            width: 100%;
+            height: 100vh;
+            flex-wrap: wrap;
+            .fourth_page_card{
+                width: 33.3%;
+                height: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
+
+
